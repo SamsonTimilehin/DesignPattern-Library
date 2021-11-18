@@ -2,5 +2,5 @@ package stockMarketApp;
 
 public interface StockBroker {
 
-    void update();
+    void update(Stock stock);
 }

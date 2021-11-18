@@ -24,20 +24,20 @@ public class CompanyImpl implements Company{
 
     @Override
     public void notifyStockBroker() {
-        brokers.forEach(StockBroker::update);
+        for(StockBroker stockBrokerElement : brokers){
+            stockBrokerElement.update(stock);
+        }
     }
 
     @Override
     public void uploadPriceChange() {
         System.out.println("Stock price change");
+        currentPrice(stock.getPrice());
         notifyStockBroker();
     }
 
-    public void priceChange(double newPrice){
+    @Override
+    public void currentPrice(double newPrice) {
         stock.setPrice(newPrice);
-
-    }
-    public double getNewPrice(){
-        return stock.getPrice();
     }
 }

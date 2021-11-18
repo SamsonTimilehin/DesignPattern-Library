@@ -6,5 +6,6 @@ public interface Company {
     void unRegister(StockBroker stockBroker);
     void notifyStockBroker();
     void uploadPriceChange();
+    void currentPrice(double newPrice);
 
 }
