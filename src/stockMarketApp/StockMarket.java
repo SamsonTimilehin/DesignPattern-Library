@@ -6,13 +6,13 @@ public class StockMarket {
 
 
 
-        Company microSoft = new CompanyImpl("apple", 45);
+        Company microSoft = new CompanyImpl("MicroSoft shares", 45);
 
-        StockBroker stockBroker1 = new StockBrokerImpl();
-        StockBroker stockBroker2 = new StockBrokerImpl();
-        StockBroker stockBroker3 = new StockBrokerImpl();
-        StockBroker stockBroker4 = new StockBrokerImpl();
-        StockBroker stockBroker5 = new StockBrokerImpl();
+        StockBroker stockBroker1 = new StockBrokerImpl("Mr Kola");
+        StockBroker stockBroker2 = new StockBrokerImpl("Mrs Jane");
+        StockBroker stockBroker3 = new StockBrokerImpl("Mr Peter");
+        StockBroker stockBroker4 = new StockBrokerImpl("Dr Maxwell");
+        StockBroker stockBroker5 = new StockBrokerImpl("Dr Johnson");
 
         microSoft.register(stockBroker1);
         microSoft.register(stockBroker2);
@@ -27,6 +27,7 @@ public class StockMarket {
         microSoft.currentPrice(59.50);
 
         microSoft.uploadPriceChange();
+
 
 
     }

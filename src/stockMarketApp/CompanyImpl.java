@@ -31,7 +31,7 @@ public class CompanyImpl implements Company{
 
     @Override
     public void uploadPriceChange() {
-        System.out.println("Stock price change");
+        System.out.println("PRICE CHANGE");
         currentPrice(stock.getPrice());
         notifyStockBroker();
     }
